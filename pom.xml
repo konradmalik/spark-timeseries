@@ -53,9 +53,9 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
     <scala.minor.version>2.11</scala.minor.version>
-    <scala.complete.version>2.11.8</scala.complete.version>
-    <spark.version>2.0.0</spark.version>
-    <breeze.version>0.12</breeze.version>
+    <scala.complete.version>2.11.12</scala.complete.version>
+    <spark.version>2.2.1</spark.version>
+    <breeze.version>0.13.2</breeze.version>
   </properties>
 
   <distributionManagement>
@@ -90,7 +90,7 @@
       <plugin>
         <groupId>net.alchim31.maven</groupId>
         <artifactId>scala-maven-plugin</artifactId>
-        <version>3.2.2</version>
+        <version>3.3.1</version>
         <configuration>
           <scalaVersion>${scala.complete.version}</scalaVersion>
           <javacArgs>
@@ -127,7 +127,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.3</version>
+        <version>3.7.0</version>
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
@@ -159,7 +159,7 @@
       <plugin>
         <groupId>org.scalastyle</groupId>
         <artifactId>scalastyle-maven-plugin</artifactId>
-        <version>0.8.0</version>
+        <version>1.0.0</version>
         <configuration>
           <verbose>false</verbose>
           <failOnWarning>false</failOnWarning>
@@ -185,7 +185,7 @@
       <plugin>
         <groupId>org.scalatest</groupId>
         <artifactId>scalatest-maven-plugin</artifactId>
-        <version>1.0</version>
+        <version>2.0.0</version>
         <configuration>
           <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
           <junitxml>.</junitxml>
@@ -426,7 +426,7 @@
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.minor.version}</artifactId>
-      <version>2.2.1</version>
+      <version>3.0.5</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -466,7 +466,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-math3</artifactId>
-      <version>3.4.1</version>
+      <version>3.6.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -478,10 +478,10 @@
 
   <profiles>
     <profile>
-      <id>scala-2.10</id>
+      <id>scala-2.11</id>
       <properties>
-        <scala.minor.version>2.10</scala.minor.version>
-        <scala.complete.version>2.10.6</scala.complete.version>
+        <scala.minor.version>2.11</scala.minor.version>
+        <scala.complete.version>2.11.12</scala.complete.version>
       </properties>
     </profile>
   </profiles>
