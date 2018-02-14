@@ -1,0 +1,7 @@
+mvn install:install-file \
+-Dfile=target/sparkts-0.4.0-SNAPSHOT.jar \
+-DgroupId=com.cloudera.sparkts \
+-DartifactId=sparkts_2.11 \
+-Dversion=0.4.0 \
+-Dpackaging=jar \
+-DgeneratePom=true
